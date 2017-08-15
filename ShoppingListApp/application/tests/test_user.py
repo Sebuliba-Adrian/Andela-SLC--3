@@ -43,3 +43,7 @@ class UserTest(unittest.TestCase):
        self.assertEqual(self.user.update_ItemsList("Fruits",
                                                  "Fruits"),
                          "No change, same name")
+
+    def test_update_ItemsList_not_found(self):
+        self.assertEqual(self.user.update_ItemsList("notinthelistofitemList", "snewname"),
+                         "ItemsList not found")
