@@ -64,5 +64,11 @@ class UserTest(unittest.TestCase):
                                                  "Clothes and Dresses"),
                          "ItemsList updated")
 
-    def test_delete_itemsList(self):
-        pass
+    def test_delete_itemsList_none(self):
+        """" Test deleting a itemsList """
+        self.assertEqual(self.user.delete_ItemsList(None), "None input")
+
+
+    def test_delete_itemsList_blank(self):
+        """" Test deleting a blank itemsList """
+        self.assertEqual(self.user.delete_ItemsList(" "), "Blank input")
