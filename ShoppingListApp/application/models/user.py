@@ -15,6 +15,12 @@ class User(object):
 
             return "Blank input"
 
+        if not len(items_list_title) > 9 and len(items_list_title) < 61:
+
+            return "ItemsList name should be greater than 10 and less than 60 characters"
+
+
+
 
 
 
