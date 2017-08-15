@@ -35,13 +35,12 @@ class UserTest(unittest.TestCase):
     def test_update_ItemsList_None(self):
         self.assertEqual(self.user.update_ItemsList(None, None), "None input")
 
-
     def test_update_ItemsList_blank(self):
         self.assertEqual(self.user.update_ItemsList(" ", " "), "Blank input")
 
     def test_update_ItemsList_same_name(self):
-       self.assertEqual(self.user.update_ItemsList("Fruits",
-                                                 "Fruits"),
+        self.assertEqual(self.user.update_ItemsList("Fruits",
+                                                    "Fruits"),
                          "No change, same name")
 
     def test_update_ItemsList_not_found(self):
@@ -53,22 +52,24 @@ class UserTest(unittest.TestCase):
         self.user.add_itemsList("Electronics")
 
         self.assertEqual(self.user.update_ItemsList("Electronics",
-                                                 "Stationary"),
+                                                    "Stationary"),
                          "No change, new name already in itemsList")
-
 
     def test_update_ItemsList_updated(self):
         self.user.add_itemsList("Drinks and Beer")
 
         self.assertEqual(self.user.update_ItemsList("Drinks and Beer",
-                                                 "Clothes and Dresses"),
+                                                    "Clothes and Dresses"),
                          "ItemsList updated")
 
     def test_delete_itemsList_none(self):
         """" Test deleting a itemsList """
         self.assertEqual(self.user.delete_ItemsList(None), "None input")
 
-
     def test_delete_itemsList_blank(self):
         """" Test deleting a blank itemsList """
         self.assertEqual(self.user.delete_ItemsList(" "), "Blank input")
+
+    def test_delete_itemsList_not_found(self):
+        self.assertEqual(self.user.delete_ItemsList(
+            "This itemsList does not exist"), "ItemsList not found")
