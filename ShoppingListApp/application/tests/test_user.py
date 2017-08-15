@@ -24,7 +24,7 @@ class UserTest(unittest.TestCase):
 
 
 
-    def test_add_itemsList_added(self):
+    def test_add_itemsList_bucket_added(self):
         self.assertEqual(self.user.add_itemsList("Furnitures"),
                          "ItemsList added")
 
