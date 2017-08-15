@@ -31,3 +31,9 @@ class UserTest(unittest.TestCase):
         self.assertEqual(self.user.add_itemsList
                          ("Furnitures"),
                          "An ItemsList with this name already exists")
+
+    def test_update_ItemsList_None(self):
+        self.assertEqual(self.user.update_ItemsList(None, None), "None input")
+
+
+    
