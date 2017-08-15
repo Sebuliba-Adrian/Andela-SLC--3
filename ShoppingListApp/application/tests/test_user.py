@@ -47,3 +47,13 @@ class UserTest(unittest.TestCase):
     def test_update_ItemsList_not_found(self):
         self.assertEqual(self.user.update_ItemsList("notinthelistofitemList", "snewname"),
                          "ItemsList not found")
+
+    def test_update_ItemsList_no_change(self):
+        self.user.add_itemsList("Stationary")
+        self.user.add_itemsList("Electronics")
+
+        self.assertEqual(self.user.update_ItemsList("Electronics",
+                                                 "Stationary"),
+                         "No change, new name already in itemsList")
+
+
