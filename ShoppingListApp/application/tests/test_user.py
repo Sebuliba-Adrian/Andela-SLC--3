@@ -19,8 +19,8 @@ class UserTest(unittest.TestCase):
         self.assertEqual(self.user.add_itemsList("shortname"),
                          "ItemsList name should be greater than 10 and less than 60 characters")
 
-        self.assertNotEqual(self.user.add_itemsList("long name long name long name long name long name long name long name"),
-                         "ItemsListt name should be greater than 10 and less than 60 characters")
+        self.assertEqual(self.user.add_itemsList("long name long name long name long name long name long name long name"),
+                         "ItemsList name should be greater than 10 and less than 60 characters")
 
 
 
