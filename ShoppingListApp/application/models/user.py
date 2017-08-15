@@ -33,10 +33,21 @@ class User(object):
                                 return "ItemsList updated"
                             return (
                                 "ItemsList name should be greater than 10 and less than 60 characters")
-                        return "No change, new name already in bucket"
+                        return "No change, new name already in itemsList"
                     return "ItemsList not found"
                 return "No change, same name"
             return "Blank input"
         return "None input"
 
+
+    def delete_ItemsList(self, itemsList_title):
+        """ Deletes an itemslist whose name is provided from a user's itemsLists """
+        if itemsList_title:
+            if itemsList_title.strip():
+                if itemsList_title in self.itemsList:
+                    self.itemsList.pop(itemsList_title)
+                    pass
+                pass
+            pass
+        pass
 
