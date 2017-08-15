@@ -57,3 +57,9 @@ class UserTest(unittest.TestCase):
                          "No change, new name already in itemsList")
 
 
+    def test_update_ItemsList_updated(self):
+        self.user.add_itemsList("Drinks and Beer")
+
+        self.assertEqual(self.user.update_ItemsList("Drinks and Beer",
+                                                 "Clothes and Dresses"),
+                         "ItemsList updated")
