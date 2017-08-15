@@ -36,4 +36,6 @@ class UserTest(unittest.TestCase):
         self.assertEqual(self.user.update_ItemsList(None, None), "None input")
 
 
-    
+    def test_update_ItemsList_blank(self):
+
+        self.assertEqual(self.user.update_ItemsList(" ", " "), "Blank input")
