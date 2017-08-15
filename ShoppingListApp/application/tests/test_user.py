@@ -73,3 +73,9 @@ class UserTest(unittest.TestCase):
     def test_delete_itemsList_not_found(self):
         self.assertEqual(self.user.delete_ItemsList(
             "This itemsList does not exist"), "ItemsList not found")
+
+    def test_delete_itemsList_deleted(self):
+        self.user.add_itemsList("This is an itemslist")
+        self.assertEqual(self.user.delete_ItemsList("This is an itemslist"),
+                         "ItemsList deleted")
+
