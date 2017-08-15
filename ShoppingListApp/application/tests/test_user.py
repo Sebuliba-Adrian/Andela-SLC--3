@@ -30,7 +30,8 @@ class UserTest(unittest.TestCase):
 
 
     def test_add_itemsList_name_already_exists(self):
-        self.assertNotEqual(self.user.add_itemsList
+        self.user.add_itemsList("Furnitures")
+        self.assertEqual(self.user.add_itemsList
                          ("Furnitures"),
                          "An ItemsList with this name already exists")
 
