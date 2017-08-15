@@ -22,19 +22,12 @@ class UserTest(unittest.TestCase):
         self.assertEqual(self.user.add_itemsList("long name long name long name long name long name long name long name"),
                          "ItemsList name should be greater than 10 and less than 60 characters")
 
-
-
     def test_add_itemsList_bucket_added(self):
         self.assertEqual(self.user.add_itemsList("Furnitures"),
                          "ItemsList added")
-
 
     def test_add_itemsList_name_already_exists(self):
         self.user.add_itemsList("Furnitures")
         self.assertEqual(self.user.add_itemsList
                          ("Furnitures"),
                          "An ItemsList with this name already exists")
-
-
-
-
