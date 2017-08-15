@@ -6,8 +6,11 @@ class UserTest(unittest.TestCase):
         self.user = User("","","")
 
 
-    def test_add_itemsList(self):
+    def test_add_itemsList_None(self):
          self.assertEqual(self.user.add_itemsList(None), "None input")
+
+    def test_add_itemsList_blank_input(self):
+        self.assertEqual(self.user.add_itemsList(" "), "Blank input")
 
 
 
