@@ -63,3 +63,6 @@ class UserTest(unittest.TestCase):
         self.assertEqual(self.user.update_ItemsList("Drinks and Beer",
                                                  "Clothes and Dresses"),
                          "ItemsList updated")
+
+    def test_delete_itemsList(self):
+        pass
