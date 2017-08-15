@@ -48,6 +48,6 @@ class User(object):
                     self.itemsList.pop(itemsList_title)
                     pass
                 pass
-            pass
-        pass
+            return "Blank input"
+        return "None input"
 
