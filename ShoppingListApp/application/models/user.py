@@ -46,7 +46,7 @@ class User(object):
             if itemsList_title.strip():
                 if itemsList_title in self.itemsList:
                     self.itemsList.pop(itemsList_title)
-                    pass
+                    return "ItemsList deleted"
                 return "ItemsList not found"
             return "Blank input"
         return "None input"
