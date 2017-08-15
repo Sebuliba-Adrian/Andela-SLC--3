@@ -29,7 +29,8 @@ class User(object):
                     if title in self.itemsList:
                         if not new_title in self.itemsList:
                             if len(new_title) > 9 and len(new_title) < 61:
-                                self.itemsList[new_title] = self.itemsList.pop(title)
+                                self.itemsList[new_title] = self.itemsList.pop(
+                                    title)
                                 return "ItemsList updated"
                             return (
                                 "ItemsList name should be greater than 10 and less than 60 characters")
@@ -39,7 +40,6 @@ class User(object):
             return "Blank input"
         return "None input"
 
-
     def delete_ItemsList(self, itemsList_title):
         """ Deletes an itemslist whose name is provided from a user's itemsLists """
         if itemsList_title:
@@ -47,7 +47,6 @@ class User(object):
                 if itemsList_title in self.itemsList:
                     self.itemsList.pop(itemsList_title)
                     pass
-                pass
+                return "ItemsList not found"
             return "Blank input"
         return "None input"
-
