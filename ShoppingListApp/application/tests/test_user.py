@@ -37,5 +37,9 @@ class UserTest(unittest.TestCase):
 
 
     def test_update_ItemsList_blank(self):
-
         self.assertEqual(self.user.update_ItemsList(" ", " "), "Blank input")
+
+    def test_update_ItemsList_same_name(self):
+       self.assertEqual(self.user.update_ItemsList("Fruits",
+                                                 "Fruits"),
+                         "No change, same name")
