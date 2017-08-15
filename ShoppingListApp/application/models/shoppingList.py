@@ -1,0 +1,2 @@
+class itemsList(object):
+    pass
