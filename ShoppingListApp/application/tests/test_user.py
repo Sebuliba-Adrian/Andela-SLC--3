@@ -1,4 +1,5 @@
 import unittest
 
 class UserTest(object):
-    pass
+    def setUp(self):
+        
