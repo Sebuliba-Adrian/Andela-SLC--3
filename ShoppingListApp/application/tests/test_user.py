@@ -6,7 +6,9 @@ class UserTest(unittest.TestCase):
     def setUp(self):
         self.user = User("", "", "")
 
-    
+    def test_created_user(self):
+        self.assertIsInstance(self.user, User, 'User not created')
+
     def test_add_itemsList_None(self):
         self.assertEqual(self.user.add_itemsList(None), "None input")
 
