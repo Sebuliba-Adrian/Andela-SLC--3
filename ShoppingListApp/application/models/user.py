@@ -20,3 +20,23 @@ class User(object):
                 return "ItemsList name should be greater than 10 and less than 60 characters"
             return "Blank input"
         return "None input"
+
+    def update_ItemsList(self, title, new_title):
+        """ Adds a new itemsList to the user's itemsLists """
+        if title and new_title:
+            if title.strip() and new_title.strip():
+                if not title == new_title:
+                    if title in self.itemsList:
+                        if not new_title in self.itemsList:
+                            if len(new_title) > 9 and len(new_title) < 61:
+                                self.itemsList[new_title] = self.itemsList.pop(title)
+                                return "ItemsList updated"
+                            return (
+                                "ItemsList name should be greater than 10 and less than 60 characters")
+                        return "No change, new name already in bucket"
+                    return "ItemsList not found"
+                return "No change, same name"
+            return "Blank input"
+        return "None input"
+
+
