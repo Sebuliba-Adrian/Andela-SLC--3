@@ -19,7 +19,7 @@ class ItemsList(object):
         return "None input"
 
     def update_description(self, description, new_description):
-        """ Updates an Item's description in a bucket """
+        """ Updates an Item's description in an items list """
         if description and new_description:
             if description.strip() and new_description.strip:
                 if not new_description == description:
@@ -47,4 +47,15 @@ class ItemsList(object):
                     return "Invalid status"
                 return "Item not found"
             return "Blank input"
+        return "None input"
+
+    def delete_item(self, description):
+        """ Deletes an Item from a itemslist """
+        if description:
+            if description.strip():
+                if description in self.items:
+                    self.items.pop(description)
+                    pass
+                pass
+            pass
         return "None input"
