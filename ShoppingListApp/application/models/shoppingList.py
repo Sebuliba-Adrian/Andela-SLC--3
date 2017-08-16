@@ -13,7 +13,7 @@ class ItemsList(object):
                 if not description in self.items:
                     self.items[description] = Item(description)
                     return "Item added"
-                pass
+                return "Item already exists"
             return "Blank input"
         return "None input"
 
