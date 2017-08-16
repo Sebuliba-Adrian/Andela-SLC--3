@@ -1,2 +1,4 @@
 class Item(object):
-    pass
+    def __init__(self, description):
+        self.description = description
+        self.status = "Pending"
