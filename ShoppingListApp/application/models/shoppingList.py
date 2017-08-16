@@ -30,6 +30,6 @@ class ItemsList(object):
                             pass
                         pass
                     pass
-                pass
+                return "No changes"
             return "Blank input"
         return "None input"
