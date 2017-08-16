@@ -30,4 +30,6 @@ class ItemListTest(unittest.TestCase):
     def test_update_description_none(self):
         self.assertEqual(self.itemsList.update_description(None, None), "None input")
 
-    
+    def test_update_description_blank(self):
+        self.assertEqual(self.itemsList.update_description(" ", " "), "Blank input")
+
