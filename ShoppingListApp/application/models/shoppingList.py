@@ -59,3 +59,5 @@ class ItemsList(object):
                 return "Item not found"
             return "Blank input"
         return "None input"
+    def get_item_count(self):
+        return len(self.items)

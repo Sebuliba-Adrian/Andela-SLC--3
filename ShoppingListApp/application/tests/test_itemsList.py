@@ -87,3 +87,7 @@ class ItemListTest(unittest.TestCase):
     def test_delete_item(self):
         self.itemsList.add_item("Book")
         self.assertEqual(self.itemsList.delete_item("Book"), "Item deleted")
+
+    def test_get_item_count(self):
+
+        pass
