@@ -56,6 +56,6 @@ class ItemsList(object):
                 if description in self.items:
                     self.items.pop(description)
                     pass
-                pass
+                return "Item not found"
             return "Blank input"
         return "None input"
