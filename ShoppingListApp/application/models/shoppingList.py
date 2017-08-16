@@ -33,3 +33,19 @@ class ItemsList(object):
                 return "No changes"
             return "Blank input"
         return "None input"
+
+
+    def update_status(self, description, status):
+        """ Updates an Item's status in a itemsList """
+        if description and status:
+            if description.strip() and status.strip():
+                if description in self.items:
+                    if status == "Pending" or status == "Done":
+                        if not self.items[description].status == status:
+                            self.items[description].status = status
+                            pass
+                        pass
+                    pass
+                pass
+            pass
+        return "None input"
