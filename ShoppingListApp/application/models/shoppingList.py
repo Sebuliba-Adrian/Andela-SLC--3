@@ -14,7 +14,7 @@ class ItemsList(object):
                     self.items[description] = Item(description)
                     pass
                 pass
-            pass
+            return "Blank input"
         return "None input"
 
 
