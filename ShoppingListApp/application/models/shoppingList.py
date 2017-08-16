@@ -27,7 +27,7 @@ class ItemsList(object):
                         if description in self.items:
                             self.items[new_description] = self.items.pop(
                                 description)
-                            pass
+                            return "Item updated"
                         return "Item not found"
                     return "New description already in ItemsList"
                 return "No changes"
