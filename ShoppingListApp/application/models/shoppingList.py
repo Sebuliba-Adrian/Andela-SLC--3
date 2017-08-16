@@ -45,7 +45,7 @@ class ItemsList(object):
                             self.items[description].status = status
                             pass
                         pass
-                    pass
+                    return "Invalid status"
                 return "Item not found"
             return "Blank input"
         return "None input"
