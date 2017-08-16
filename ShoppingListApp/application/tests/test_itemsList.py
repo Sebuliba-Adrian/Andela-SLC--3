@@ -18,7 +18,12 @@ class ItemListTest(unittest.TestCase):
     def test_add_item_added(self):
         self.assertEqual(self.itemsList.add_item("mangoes"), "Item added")
 
-       
+    def test_add_item_exists(self):
+        self.itemsList.add_item("mangoes")
+        self.assertEqual(self.itemsList.add_item("mangoes"), "Item already exists")
+
+
+
 
 
 
