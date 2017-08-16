@@ -12,7 +12,7 @@ class ItemsList(object):
             if description.strip():
                 if not description in self.items:
                     self.items[description] = Item(description)
-                    pass
+                    return "Item added"
                 pass
             return "Blank input"
         return "None input"
