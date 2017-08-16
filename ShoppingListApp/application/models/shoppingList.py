@@ -28,8 +28,8 @@ class ItemsList(object):
                             self.items[new_description] = self.items.pop(
                                 description)
                             pass
-                        pass
-                    return "Item not found"
+                        return "Item not found"
+                    return "New description already in ItemsList"
                 return "No changes"
             return "Blank input"
         return "None input"
