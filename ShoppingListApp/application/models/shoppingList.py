@@ -29,7 +29,7 @@ class ItemsList(object):
                                 description)
                             pass
                         pass
-                    pass
+                    return "Item not found"
                 return "No changes"
             return "Blank input"
         return "None input"
