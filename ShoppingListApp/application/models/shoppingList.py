@@ -34,7 +34,6 @@ class ItemsList(object):
             return "Blank input"
         return "None input"
 
-
     def update_status(self, description, status):
         """ Updates an Item's status in a itemsList """
         if description and status:
