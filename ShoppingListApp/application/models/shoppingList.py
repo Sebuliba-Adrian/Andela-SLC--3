@@ -55,7 +55,7 @@ class ItemsList(object):
             if description.strip():
                 if description in self.items:
                     self.items.pop(description)
-                    pass
+                    return "Item deleted"
                 return "Item not found"
             return "Blank input"
         return "None input"
