@@ -9,8 +9,10 @@ class ItemListTest(unittest.TestCase):
     def test_itemsList_instantiation(self):
         self.assertIsInstance(self.itemsList, ItemsList, "Failed to instantiate")
 
-    # def test_update_none_input(self, description, new_description):
-    #     self.assertEqual(self.itemsList.update_bucket(" ", "  "), "Blank input")
+    def test_add_item_none(self):
+       self.assertEqual(self.itemsList.add_item(None), "None input")
+
+
 
 
 
