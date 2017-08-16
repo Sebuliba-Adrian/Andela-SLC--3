@@ -67,3 +67,8 @@ class ItemListTest(unittest.TestCase):
         self.itemsList.add_item("Apples")
         self.itemsList.add_item("Oranges")
         self.assertEqual(self.itemsList.update_status("Apples", "The status"), "Invalid status")
+
+    # def test_update_status_item_updated(self):
+    #     self.assertEqual(self.itemsList.update_status("Ream", "Done"),
+    #                      "Item updated")
+
