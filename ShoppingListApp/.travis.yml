@@ -8,3 +8,5 @@ install:
   - pip install -r requirements.txt
 script:
   - py.test --cov-report term-missing --cov app -v
+
+  [![Build Status](https://travis-ci.org/Sebuliba-Adrian/Andela-SLC--3.svg?branch=master)](https://travis-ci.org/Sebuliba-Adrian/Andela-SLC--3)
