@@ -47,5 +47,5 @@ class ItemsList(object):
                         pass
                     pass
                 pass
-            pass
+            return "Blank input"
         return "None input"
