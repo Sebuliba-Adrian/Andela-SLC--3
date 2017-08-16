@@ -12,3 +12,4 @@ from application.user.views import user_blueprint
 app.register_blueprint(api_blueprint, url_prefix ='/api')
 app.register_blueprint(itemslist_blueprint)
 app.register_blueprint(user_blueprint)
+
