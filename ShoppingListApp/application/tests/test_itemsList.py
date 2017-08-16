@@ -25,13 +25,13 @@ class ItemListTest(unittest.TestCase):
         self.assertEqual(self.itemsList.add_item(
             "mangoes"), "Item already exists")
 
-
-
     def test_update_description_none(self):
-        self.assertEqual(self.itemsList.update_description(None, None), "None input")
+        self.assertEqual(self.itemsList.update_description(
+            None, None), "None input")
 
     def test_update_description_blank(self):
-        self.assertEqual(self.itemsList.update_description(" ", " "), "Blank input")
+        self.assertEqual(self.itemsList.update_description(
+            " ", " "), "Blank input")
 
     def test_update_description_no_changes(self):
         self.assertEqual(self.itemsList.update_description(
@@ -47,11 +47,7 @@ class ItemListTest(unittest.TestCase):
         self.assertEqual(self.itemsList.update_description("Oranges", "Apples"),
                          "New description already in ItemsList")
 
-
     def test_update_description_updated(self):
         self.itemsList.add_item("Apples")
         self.assertEqual(self.itemsList.update_description("Apples", "Berries"),
                          "Item updated")
-
-
-
