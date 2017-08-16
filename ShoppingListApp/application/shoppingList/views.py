@@ -8,3 +8,5 @@ from ..decorators import login_required
 @itemslist_blueprint.route('/shoppingList')
 def itemsList():
     return render_template('shoppingList/index.html')
+
+
