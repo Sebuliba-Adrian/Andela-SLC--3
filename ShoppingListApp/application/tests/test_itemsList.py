@@ -56,5 +56,7 @@ class ItemListTest(unittest.TestCase):
 
     def test_update_status_none(self):
         self.assertEqual(self.itemsList.update_status(None, None), "None input")
-    
+    def test_update_status_blank(self):
+        self.assertEqual(self.itemsList.update_status(" ", " "), "Blank input")
+   
 
