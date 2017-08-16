@@ -1,10 +1,11 @@
 
 from application.models.item import Item
+
+
 class ItemsList(object):
     def __init__(self, title):
         self.title = title
         self.items = {}
-
 
     def add_item(self, description):
         """ Adds an Item to a items """
@@ -17,9 +18,18 @@ class ItemsList(object):
             return "Blank input"
         return "None input"
 
-
-
-
-
-
-
+    def update_description(self, description, new_description):
+        """ Updates an Item's description in a bucket """
+        if description and new_description:
+            if description.strip() and new_description.strip:
+                if not new_description == description:
+                    if not new_description in self.items:
+                        if description in self.items:
+                            self.items[new_description] = self.items.pop(
+                                description)
+                            pass
+                        pass
+                    pass
+                pass
+            pass
+        return "None input"
