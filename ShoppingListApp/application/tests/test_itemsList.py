@@ -52,23 +52,23 @@ class ItemListTest(unittest.TestCase):
         self.assertEqual(self.itemsList.update_description("Apples", "Berries"),
                          "Item updated")
 
-
-
     def test_update_status_none(self):
-        self.assertEqual(self.itemsList.update_status(None, None), "None input")
+        self.assertEqual(self.itemsList.update_status(
+            None, None), "None input")
+
     def test_update_status_blank(self):
         self.assertEqual(self.itemsList.update_status(" ", " "), "Blank input")
 
-
     def test_update_status_not_found(self):
-        self.assertEqual(self.itemsList.update_status("Stationary", "Pending"), "Item not found")
+        self.assertEqual(self.itemsList.update_status(
+            "Stationary", "Pending"), "Item not found")
 
     def test_update_status_invalid(self):
         self.itemsList.add_item("Apples")
         self.itemsList.add_item("Oranges")
-        self.assertEqual(self.itemsList.update_status("Apples", "The status"), "Invalid status")
+        self.assertEqual(self.itemsList.update_status(
+            "Apples", "The status"), "Invalid status")
 
     # def test_update_status_item_updated(self):
     #     self.assertEqual(self.itemsList.update_status("Ream", "Done"),
     #                      "Item updated")
-
