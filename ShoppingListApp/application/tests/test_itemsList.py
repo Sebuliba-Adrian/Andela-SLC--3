@@ -15,6 +15,9 @@ class ItemListTest(unittest.TestCase):
     def test_add_item_blank(self):
         self.assertEqual(self.itemsList.add_item(" "), "Blank input")
 
+    def test_add_item_aready_exists(self):
+        self.assertEqual(self.itemsList.add_item("mangoes"), "Item added")
+
 
 
 
