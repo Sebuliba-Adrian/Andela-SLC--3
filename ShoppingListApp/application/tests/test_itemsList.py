@@ -74,4 +74,7 @@ class ItemListTest(unittest.TestCase):
     #                      "Item updated")
 
 
+    def test_delete_item_none(self):
+
+        self.assertEqual(self.itemsList.delete_item(None), "None input")
     
