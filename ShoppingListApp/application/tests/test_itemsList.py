@@ -51,3 +51,10 @@ class ItemListTest(unittest.TestCase):
         self.itemsList.add_item("Apples")
         self.assertEqual(self.itemsList.update_description("Apples", "Berries"),
                          "Item updated")
+
+
+
+    def test_update_status_none(self):
+        self.assertEqual(self.itemsList.update_status(None, None), "None input")
+    
+
