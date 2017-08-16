@@ -43,8 +43,8 @@ class ItemsList(object):
                     if status == "Pending" or status == "Done":
                         if not self.items[description].status == status:
                             self.items[description].status = status
-                            pass
-                        pass
+                            return "Item updated"
+                        return "Item updated"
                     return "Invalid status"
                 return "Item not found"
             return "Blank input"
