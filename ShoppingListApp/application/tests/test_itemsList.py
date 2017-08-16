@@ -41,4 +41,3 @@ class ItemListTest(unittest.TestCase):
         self.assertEqual(self.itemsList.update_description(
             "Green mango", "Green Mango"), "Item not found")
 
-    
