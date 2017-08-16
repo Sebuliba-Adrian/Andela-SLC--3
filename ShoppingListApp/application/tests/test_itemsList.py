@@ -73,19 +73,17 @@ class ItemListTest(unittest.TestCase):
     #     self.assertEqual(self.itemsList.update_status("Ream", "Done"),
     #                      "Item updated")
 
-
     def test_delete_item_none(self):
 
         self.assertEqual(self.itemsList.delete_item(None), "None input")
+
     def test_delete_item_blank(self):
         self.assertEqual(self.itemsList.delete_item(" "), "Blank input")
 
     def test_delete_item_not_found(self):
-        self.assertEqual(self.itemsList.delete_item("Laptop"), "Item not found")
+        self.assertEqual(self.itemsList.delete_item(
+            "Laptop"), "Item not found")
 
     def test_delete_item(self):
         self.itemsList.add_item("Book")
         self.assertEqual(self.itemsList.delete_item("Book"), "Item deleted")
-
-
-
