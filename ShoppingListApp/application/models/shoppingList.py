@@ -57,5 +57,5 @@ class ItemsList(object):
                     self.items.pop(description)
                     pass
                 pass
-            pass
+            return "Blank input"
         return "None input"
