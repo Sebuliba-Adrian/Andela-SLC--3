@@ -46,6 +46,6 @@ class ItemsList(object):
                             pass
                         pass
                     pass
-                pass
+                return "Item not found"
             return "Blank input"
         return "None input"
