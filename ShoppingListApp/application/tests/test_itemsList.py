@@ -47,7 +47,11 @@ class ItemListTest(unittest.TestCase):
         self.assertEqual(self.itemsList.update_description("Oranges", "Apples"),
                          "New description already in ItemsList")
 
-    
+
+    def test_update_description_updated(self):
+        self.itemsList.add_item("Apples")
+        self.assertEqual(self.itemsList.update_description("Apples", "Berries"),
+                         "Item updated")
 
 
 
