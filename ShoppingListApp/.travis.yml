@@ -12,8 +12,19 @@ python:
   - "3.7-dev" # 3.7 development branch
   - "nightly" # currently points to 3.7-dev
 # command to install dependencies
-install: "pip install -r requirements.txt"
+env: null
+install:
+  - travis_retry pip install -r requirements.txt
+  - travis_retry pip install coveralls
+  - pip install nose2
+
 # command to run tests
-script: pytest
+script:
+  - coverage run --source=lib -m nose2.__main__ -v    
+
+repo_token: Vaw0Prf5jnD07kVwcXAok07gosiVV8oo5
+
+after_success:
+  - coveralls
 
 
