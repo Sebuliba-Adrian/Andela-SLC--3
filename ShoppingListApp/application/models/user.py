@@ -1,6 +1,4 @@
-from application.models.shoppingList import ItemsList
-
-
+from .shopping_list import ItemsList
 class User(object):
     def __init__(self, name, username, password):
         self.name = name
@@ -8,7 +6,7 @@ class User(object):
         self.password = password
         self.itemsList = {}
 
-    def add_itemsList(self, items_list_title):
+    def add_ItemsList(self, items_list_title):
         if items_list_title:
             if items_list_title.strip():
                 if len(items_list_title) > 9 and len(items_list_title) < 61:
@@ -51,4 +49,3 @@ class User(object):
             return "Blank input"
         return "None input"
 
-    
