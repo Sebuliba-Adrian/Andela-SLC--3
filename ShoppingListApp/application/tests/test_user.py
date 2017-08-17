@@ -1,7 +1,6 @@
 import unittest
 from application.models.user import User
 
-
 class UserTest(unittest.TestCase):
     def setUp(self):
         self.user = User("Adrian", "adris", "secret")
@@ -10,25 +9,25 @@ class UserTest(unittest.TestCase):
         self.assertIsInstance(self.user, User, 'User not created')
 
     def test_add_itemsList_None(self):
-        self.assertEqual(self.user.add_itemsList(None), "None input")
+        self.assertEqual(self.user.add_ItemsList(None), "None input")
 
     def test_add_itemsList_blank_input(self):
-        self.assertEqual(self.user.add_itemsList(" "), "Blank input")
+        self.assertEqual(self.user.add_ItemsList(" "), "Blank input")
 
     def test_add_itemsList_should_be_between10and60(self):
-        self.assertEqual(self.user.add_itemsList("shortname"),
+        self.assertEqual(self.user.add_ItemsList("shortname"),
                          "ItemsList name should be greater than 10 and less than 60 characters")
 
-        self.assertEqual(self.user.add_itemsList("long name long name long name long name long name long name long name"),
+        self.assertEqual(self.user.add_ItemsList("long name long name long name long name long name long name long name"),
                          "ItemsList name should be greater than 10 and less than 60 characters")
 
     def test_add_itemsList_bucket_added(self):
-        self.assertEqual(self.user.add_itemsList("Furnitures"),
+        self.assertEqual(self.user.add_ItemsList("Furnitures"),
                          "ItemsList added")
 
     def test_add_itemsList_name_already_exists(self):
-        self.user.add_itemsList("Furnitures")
-        self.assertEqual(self.user.add_itemsList
+        self.user.add_ItemsList("Furnitures")
+        self.assertEqual(self.user.add_ItemsList
                          ("Furnitures"),
                          "An ItemsList with this name already exists")
 
@@ -48,15 +47,15 @@ class UserTest(unittest.TestCase):
                          "ItemsList not found")
 
     def test_update_ItemsList_no_change(self):
-        self.user.add_itemsList("Stationary")
-        self.user.add_itemsList("Electronics")
+        self.user.add_ItemsList("Stationary")
+        self.user.add_ItemsList("Electronics")
 
         self.assertEqual(self.user.update_ItemsList("Electronics",
                                                     "Stationary"),
                          "No change, new name already in itemsList")
 
     def test_update_ItemsList_updated(self):
-        self.user.add_itemsList("Drinks and Beer")
+        self.user.add_ItemsList("Drinks and Beer")
 
         self.assertEqual(self.user.update_ItemsList("Drinks and Beer",
                                                     "Clothes and Dresses"),
@@ -75,7 +74,7 @@ class UserTest(unittest.TestCase):
             "This itemsList does not exist"), "ItemsList not found")
 
     def test_delete_itemsList_deleted(self):
-        self.user.add_itemsList("This is an itemslist")
+        self.user.add_ItemsList("This is an itemslist")
         self.assertEqual(self.user.delete_ItemsList("This is an itemslist"),
                          "ItemsList deleted")
 
