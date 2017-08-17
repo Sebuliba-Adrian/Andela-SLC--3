@@ -1,7 +1,9 @@
 [![Build Status](https://travis-ci.org/Sebuliba-Adrian/Andela-SLC--3.svg?branch=master)](https://travis-ci.org/Sebuliba-Adrian/Andela-SLC--3)
+[![Code Climate](https://codeclimate.com/github/Sebuliba-Adrian/Andela-SLC--3/badges/gpa.svg)](https://codeclimate.com/github/Sebuliba-Adrian/Andela-SLC--3)
+[![Test Coverage](https://codeclimate.com/github/Sebuliba-Adrian/Andela-SLC--3/badges/coverage.svg)](https://codeclimate.com/github/Sebuliba-Adrian/Andela-SLC--3/coverage)
+
 # Andela-SLC--3
-<<<<<<< HEAD
-=======
+
 A Shopping list Web Application
 
 # A Shopping list Web Application
