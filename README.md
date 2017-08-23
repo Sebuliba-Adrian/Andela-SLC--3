@@ -5,6 +5,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/Sebuliba-Adrian/Andela-SLC--3/badge.svg?branch=master)](https://coveralls.io/github/Sebuliba-Adrian/Andela-SLC--3?branch=master)
 
 # Andela-SLC--3
+
 A Shopping list Web Application
 
 # A Shopping list Web Application
@@ -47,8 +48,19 @@ http://localhost:5000/
 
 
 ## Running the tests
-$ green
-
+$(.venv) green
 or
-$nose2
+$(.venv) nose2
 
+
+
+
+
+```
+
+
+
+
+
+
+>>>>>>> master
