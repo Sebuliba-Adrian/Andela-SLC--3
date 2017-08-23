@@ -50,16 +50,3 @@ http://localhost:5000/
 $(.venv) green
 or
 $(.venv) nose2
-
-
-
-
-
-```
-
-
-
-
-
-
->>>>>>> master
