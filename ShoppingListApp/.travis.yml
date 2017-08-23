@@ -1,18 +1,10 @@
 language: python
 python:
-  - "2.6"
-  - "2.7"
-  - "3.2"
-  - "3.3"
-  - "3.4"
-  - "3.5"
-  - "3.5-dev" # 3.5 development branch
-  - "3.6"
-  - "3.6-dev" # 3.6 development branch
-  - "3.7-dev" # 3.7 development branch
-  - "nightly" # currently points to 3.7-dev
+  - 3.5.2
+ 
+  
 # command to install dependencies
-env: null
+
 install:
   - travis_retry pip install -r requirements.txt
   - travis_retry pip install coveralls
@@ -22,7 +14,7 @@ install:
 script:
   - coverage run --source=lib -m nose2.__main__ -v    
 
-repo_token: Vaw0Prf5jnD07kVwcXAok07gosiVV8oo5
+
 
 after_success:
   - coveralls
